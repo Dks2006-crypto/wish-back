@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { WhishesService } from './whishes.service';
-import { whishesController } from './whishes.controller';
+import { WhishesController } from './whishes.controller';
 import { JwtModule } from '@nestjs/jwt';
 import { PrismaModule } from 'src/prisma/prisma.module';
 import { PassportModule } from '@nestjs/passport';
@@ -11,7 +11,7 @@ import { PassportModule } from '@nestjs/passport';
       PrismaModule,
       PassportModule,
     ],
-  controllers: [whishesController],
+  controllers: [WhishesController],
   providers: [WhishesService],
 })
 export class WhishesModule {}
